@@ -1,0 +1,8 @@
+cd /
+cd /home/brinis/git/Dockerdemo
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world /home/brinis/git/Dockerdemo/
+docker run -d --name helloworld -p 80:80 -v /home/brinis/git/Dockerdemo/src/:/var/www/html hello-world
+
+
